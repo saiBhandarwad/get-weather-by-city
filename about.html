@@ -85,11 +85,14 @@
                   <form class="row g-3" name="submit-to-google-sheet">
                     <div class="col-md-6">
                         <label for="inputPassword4" class="form-label">First Name</label>
-                        <input  type="text" class="form-control" id="inputPassword4" required name="First_Name">
+                        <!-- <input  type="text" class="form-control" id="inputPassword4" required name="First_Name" > -->
+                        <input type="text" class="form-control" name="First_Name" onkeypress="return (event.charCode > 64 && 
+                        event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" id="inputPassword4">
                     </div>
                     <div class="col-md-6">
                         <label for="inputPassword4" class="form-label">Last Name</label>
-                        <input  type="text" class="form-control" id="inputPassword4" required name="Last_Name">
+                        <input  type="text" class="form-control" id="inputPassword4" required name="Last_Name" onkeypress="return (event.charCode > 64 && 
+                        event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)">
                     </div>
                       <div class="col-md-12">
                         <label for="inputEmail4" class="form-label">Email</label>
@@ -97,7 +100,7 @@
                       </div>
                       <div class="col-md-6">
                         <label for="input-group" class="form-label">Phone Number</label>
-                        <input  type="number" class="form-control" required id="inputPassword4" name="PhoneNumber">
+                        <input  type="tel" class="form-control" required id="inputPassword4" pattern="[7-9]{1}[0-9]{9}" name="PhoneNumber">
                       </div>
                       <div class="col-12">
                         <label for="inputAddress" class="form-label">Address</label>
